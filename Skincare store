@@ -1,0 +1,26 @@
+--Create a skincare store database
+
+CREATE TABLE skincare(
+    id INTEGER PRIMARY KEY,
+    name TEXT,
+    price INTEGER,
+    useby TEXT,
+    popularity INTEGER
+);
+
+INSERT INTO skincare VALUES(1,"Face wash",19.99,"12/23",90);
+INSERT INTO skincare VALUES(2,"Serum",40,"11/25",60);
+INSERT INTO skincare VALUES(3,"Toner",29.68,"12/23",55);
+INSERT INTO skincare VALUES(4,"Essence",39.68,"12/25",56);
+INSERT INTO skincare VALUES(5,"Moisturizer",29.80,"12/26",80);
+INSERT INTO skincare VALUES(6,"Exfoliate ",40,"16/27",75);
+INSERT INTO skincare VALUES(7,"Eye cream",55.78,"12/26",88);
+INSERT INTO skincare VALUES(8,"Vitamin c",55,"11/28",45);
+
+--display the database order by price.
+
+SELECT *FROM skincare ORDER BY price desc;
+
+--what are the most popular items in the store ?
+
+SELECT *FROM skincare ORDER BY popularity limit 5;
